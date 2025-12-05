@@ -1,14 +1,11 @@
 import React from "react";
-import Header from "./components/Header.jsx";
-import Footer from "./components/Footer.jsx";
+import {Footer, Header} from "./components/index.js";
 
 const App = () => {
   return (
     <>
       <Header />
-
       <h1>Home</h1>
-
       <Footer />
     </>
   );
