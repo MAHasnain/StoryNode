@@ -1,29 +1,36 @@
 import React from "react";
-import { Link } from "react-router";
 
-const Header = () => {
+import {
+  Button,
+  Navbar,
+  NavbarBrand,
+  NavbarCollapse,
+  NavbarLink,
+  NavbarToggle,
+} from "flowbite-react";
+
+function Header() {
   return (
-    <>
-      <header>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/all-stories">Stories</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    </>
+    <Navbar fluid rounded>
+      <NavbarBrand to="/">
+        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+          StoryNode
+        </span>
+      </NavbarBrand>
+      <div className="flex md:order-2">
+        <Button>Login</Button>
+        <NavbarToggle />
+      </div>
+      <NavbarCollapse>
+        <NavbarLink href="/" active>
+          Home
+        </NavbarLink>
+        <NavbarLink href="/about">About</NavbarLink>
+        <NavbarLink href="/all-stories">Stories</NavbarLink>
+        <NavbarLink href="/contact">Contact</NavbarLink>
+      </NavbarCollapse>
+    </Navbar>
   );
-};
+}
 
 export default Header;
