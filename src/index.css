@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -15,14 +17,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
+.navLink-classes {
+  @apply block py-2 px-3 text-heading rounded hover: bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent
+}
+
+/* a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
-}
-a:hover {
+} */
+
+/* a:hover {
   color: #535bf2;
-}
+} */
 
 body {
   margin: 0;
@@ -48,22 +55,26 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
+
+/* button:hover {
   border-color: #646cff;
-}
-button:focus,
+} */
+
+/* button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
-  a:hover {
+
+  /* a:hover {
     color: #747bff;
-  }
+  } */
+
   button {
     background-color: #f9f9f9;
   }
