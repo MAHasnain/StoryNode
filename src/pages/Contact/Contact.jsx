@@ -1,14 +1,12 @@
 import React from "react";
-import { Footer, Header } from "../../components";
+import { FooterComp, Header } from "../../components";
 
-const Contact = () => {
+export const Contact = () => {
   return (
     <>
       <Header />
       <div>Contact</div>
-      <Footer />
+      <FooterComp />
     </>
   );
 };
-
-export default Contact;

@@ -22,12 +22,12 @@ function Header() {
         <NavbarToggle />
       </div>
       <NavbarCollapse>
-        <NavbarLink href="/" active>
+        <NavbarLink href="/" >
           Home
         </NavbarLink>
-        <NavbarLink href="/about">About</NavbarLink>
-        <NavbarLink href="/all-stories">Stories</NavbarLink>
-        <NavbarLink href="/contact">Contact</NavbarLink>
+        <NavbarLink className="block py-2 px-3 text-3xl rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent" href="/about">About</NavbarLink>
+        <NavbarLink className="block py-2 px-3 text-3xl rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent" href="/all-stories">Stories</NavbarLink>
+        <NavbarLink className="block py-2 px-3 text-3xl rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent" href="/contact">Contact</NavbarLink>
       </NavbarCollapse>
     </Navbar>
   );
