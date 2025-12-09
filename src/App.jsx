@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FooterComp, Header, StoryCard } from "./components/index.js";
 import { Card } from "antd";
 import axios from "axios";
+import { Link } from "react-router";
 const { Meta } = Card;
 
 const App = () => {
@@ -22,9 +23,9 @@ const App = () => {
 
       <main>
         <section>
-          <div className="">
-            <h2>Stories that spark ideas</h2>
-            <p>
+          <div className="highlighted-section flex flex-col items-center justify-center text-center p-10 bg-neutral-secondary text-white mb-10 ">
+            <h2 className="text-4xl">Stories that spark ideas</h2>
+            <p className="m-10 text-xl max-w-2xl ">
               Dive into a clean space built for thoughtful writing, honest
               perspectives, and creative expression.
             </p>
@@ -44,6 +45,14 @@ const App = () => {
               // </Card>
               <StoryCard title={story.title} description={story.body} />
             ))}
+          </div>
+          <div className="flex justify-center mb-10">
+            <Link
+              to="/all-stories"
+              className="text-fg-brand hover:underline text-xl font-medium"
+            >
+              View All Stories
+            </Link>
           </div>
         </div>
       </main>
