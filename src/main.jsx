@@ -10,7 +10,7 @@ import Stories from "./pages/Stories/Stories.jsx";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
-    <Routes>
+    <Routes >
       <Route path="/" element={<App />} />
       <Route path="all-stories" element={<Stories />} />
       <Route path="about" element={<About />} />
